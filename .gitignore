@@ -1,0 +1,31 @@
+# OSX
+#
+.DS_Store
+
+# node.js
+#
+**/node_modules/
+**/npm/
+npm-debug.log
+
+
+.vscode/
+.ionide/
+# F#
+.fake/
+.fable/
+packages/
+build/
+obj
+bin
+out
+paket-files
+
+# git
+*.orig
+
+.vs
+
+*.nupkg
+dotnetsdk
+temp
