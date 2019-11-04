@@ -3,7 +3,7 @@
 
 This is a port of a sample counter app implemented with Adaptive instead of Elmish.
 
-Do yourself a favor and read the great explanation by Georg Haaser and Don Syme at [FSharp.Data.Adaptive](https://fsprojects.github.io/FSharp.Data.Adaptive/)
+Read the great explanation by Georg Haaser and Don Syme at [FSharp.Data.Adaptive](https://fsprojects.github.io/FSharp.Data.Adaptive/) to understand what goes on.
 
 TL&DR;
 - **Changable** values are like Excel cells with raw numbers
