@@ -44,7 +44,7 @@ let CounterApp =
                 button [ OnClick (fun _ -> transact (fun () -> cCount.Value <- cCount.Value + 1)) ] [ str "+" ]
             ]
             div [] [
-                button [ OnClick (fun _ -> showingPrimes.update (not showingPrimes.current)) ] [str "toggle primes"]
+                button [ OnClick (fun _ -> showingPrimes.update (fun showing -> not showing)) ] [str "toggle primes"]
                 if showingPrimes.current then
                     div [ Style [PaddingLeft "2em"] ] [ PrimeApp () ]
             ]
