@@ -14,7 +14,7 @@ let rec nextPrime x =
     if isPrime (x+1) then (x+1) else nextPrime (x+1)
 
 // here is our state:
-//   Count is changable
+//   Count is changeable
 //   Primes are adaptive (they adapt to change of count)
 let cCount = cval 1
 let aPrime = cCount |> AVal.map nextPrime
