@@ -7,7 +7,7 @@ Read the great explanation by Georg Haaser and Don Syme at [FSharp.Data.Adaptive
 
 TL&DR;
 - **Changeable** values are like Excel cells with raw numbers
-- **Adaptive** values are like Excel formula cells (e.g. `=SUM(A2:A10)` in Excel terminology) - they upadate when source chells change.
+- **Adaptive** values are like Excel formula cells (e.g. `=SUM(A2:A10)` in Excel terminology) - they upadate when source values change.
 - React **Hook.useAdaptive** causes React components to update when adaptive values change
 - Unlike Excel formula cells that update on any change, Adaptive values will update only if someone is listening to changes -- *"If a tree falls in a forest and no one is around to hear it, does it make a sound?"*  
 Thus React components that are not on screen won't cause corresponding adaptive values to recalculate.
@@ -17,7 +17,7 @@ Why would I care?
 - You can now build true reactive apps without any Elmish boilerplate: no commands, dispatchers, reducers, etc., just adaptive state with purely-functional declarative (Excel style) mappings.
 - Having structures like `List`, `Map`, `Set` yields a whole plethora of novel efficient approaches:  
 Imagine when a single new element is added to existing changeable List, an adaptive descendant datastructure does not necessarily need to fully recalculate its whole state but rather just incrementally handle addition of that one extra element - and that is what FSharp.Data.Adaptive is all about.
-- Ideally we would propagate *'adding a new element to a changeable list'* incrementally all the way down to *'adding a node in browser's DOM'* (optimally without even any Virtual DOM) - but that's still in design phase (React & DOM experts are kindly invited to participate in the search for optimal generic solutions - join the discussion at https://discordapp.com/channels/611129394764840960/624645480219148299).
+- Ideally *'adding a new element to a changeable list'* would incrementally propagate all the way down to *'adding a node in browser's DOM'* (possibly without even any Virtual DOM involvement) - but that's still in design phase (React & DOM experts are kindly invited to participate in the search for optimal generic solutions - join the discussion at https://discordapp.com/channels/611129394764840960/624645480219148299).
 
 Still not convinced?
 - Watch the wonderful explanation of OCaml Incremental by Yaron Minsky at https://www.youtube.com/watch?v=R3xX37RGJKE
