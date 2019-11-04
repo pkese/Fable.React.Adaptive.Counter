@@ -24,7 +24,8 @@ TL&DR;
 React components that are not on screen won't cause corresponding adaptive values to recalculate.
 
 Why would I care?
-- You can now build True reactive apps without any Elmish boilerplate: no commands, dispatchers, reducers, etc., just adaptive state with purely-functional declarative (Excel style) mappings.
+- You can now build True reactive apps without any Elmish boilerplate: no commands, dispatchers, reducers, etc., you just write state transforms.
+- Adaptive takes care of state mutations; your code touching the state can remain purely functional and declarative - remember... Excel is worlds most popular functional language: https://www.youtube.com/watch?v=_M4P5M85KO8
 - Having structures like `List`, `Map`, `Set` yields a whole plethora of novel efficient approaches:  
 Imagine when a single new element is added to existing changeable List, an adaptive descendant datastructure does not necessarily need to fully recalculate its whole state but rather just incrementally handle addition of that one extra element - and that is what FSharp.Data.Adaptive is all about.
 - Ideally *'adding a new element to a changeable list'* would incrementally propagate all the way down to *'adding a node in browser's DOM'*. However that's still in design phase (React & DOM experts are kindly invited to participate in the search for optimal generic solutions - join the discussion at https://discordapp.com/channels/611129394764840960/624645480219148299).
