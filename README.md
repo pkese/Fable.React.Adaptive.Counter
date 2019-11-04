@@ -5,7 +5,7 @@ This is a port of a sample react-counter app implemented with Adaptive instead o
 
 ### Adaptive what?
 
-Adaptive is a new approach to managing state in apps. Comparing explicit state management in Elmish with Adaptive, is similar to comparing explicit views in jQuery with views in React:
+Adaptive is a new approach to managing state in apps. Comparing explicit state management in Elmish with Adaptive, is similar to comparing explicit views in jQuery with React:
 
 |                  | Explicit | Managed   |
 |------------------|----------|-----------|
@@ -18,11 +18,11 @@ Read Georg Haaser's and Don Syme's introduction to [FSharp.Data.Adaptive](https:
 ### TL&DR;
 
 - **Changeable** values are like Excel cells with raw numbers
-- **Adaptive** values are like Excel formula cells like `"=SUM(A2:A10)"` - they upadate when source values change.
-- React **Hook.useAdaptive** causes React components to update when adaptive values change
+- **Adaptive** values are like Excel formula cells, e.g. `"=SUM(A2:A10)"`. They update when source values change.
+- React **Hook.useAdaptive** makes React components update when adaptive values change.
 - Unlike Excel cells that can contain only scalars, Adaptive values can contain data structures like `List`, `Map`, `Set`...
-- Unlike Excel formula cells that update on every change, Adaptive values update only when someone is listening to changes -- *"If a tree falls in a forest and no one is around to hear it, does it make a sound?"*  
-React components that are not on screen won't cause corresponding adaptive values to recalculate.
+- Unlike Excel formula cells that update on every change, Adaptive values update only when someone is listening to changes. React components that are not on screen won't cause corresponding adaptive values to recalculate.  
+*"If a tree falls in a forest and no one is around to hear it, does it make a sound?"*  
 
 ### Why would I care?
 
