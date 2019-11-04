@@ -1,12 +1,9 @@
-A counter demo of [Elmish](https://github.com/fable-compiler/fable-elmish).
-========
 
-This is a port of Elm's counter implemented in F# and targeting Fable and React.
+## A counter app demo with  [FSharp.Data.Adaptive](https://fsprojects.github.io/FSharp.Data.Adaptive/) and [Fable.React.Adaptive](https://github.com/krauthaufen/Fable.Elmish.Adaptive/tree/master/src/Fable.React.Adaptive) 
 
+This is a port of a sample counter app implemented with Adaptive instead of Elmish.
 
-## Live sample
-The sample is live and you can try it [here](https://fable-elmish.github.io/sample-react-counter).
-
-## Build locally and start hot-reloading watch
-1. `./build.sh Watch` on *nix or `build Watch` on Windows
-2. open http://localhost:8080/webpack-dev-server/
+To build locally and start hot-reloading server
+1. `yarn install`
+2. `yarn start`
+3. open http://localhost:8080/

@@ -77,6 +77,7 @@ module.exports = {
     devServer: {
         contentBase: resolve('./build/'),
         publicPath: "/",
+        host: '0.0.0.0',
         port: 8080,
         hot: true,
         inline: true
@@ -89,7 +90,7 @@ module.exports = {
                 use: {
                     loader: "fable-loader",
                     options: {
-                        define: isProduction ? [] : ["DEBUG"],
+                        define: isProduction ? ["ADAPTIVE_NO_TYPE_TESTS"] : ["ADAPTIVE_NO_TYPE_TESTS","DEBUG"],
                         extra: { optimizeWatch: true }
                     }
                 }

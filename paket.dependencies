@@ -1,14 +1,28 @@
-source https://nuget.org/api/v2
-framework: netstandard2.0
+version 5.229.0
+source https://api.nuget.org/v3/index.json
+redirects: off
+storage: none
+framework: netstandard2.0, netcoreapp2.2
 
-nuget FSharp.Core redirects:force, content:none
+
+
+nuget FSharp.Core
 nuget Fable.Core
 nuget Fable.Elmish
+nuget Fable.React
 nuget Fable.Elmish.React
 nuget Fable.Elmish.HMR
+nuget Fable.Browser.Dom
+nuget Fable.Browser.Event
 
-group Build
-framework: net46
-    source https://nuget.org/api/v2
-    nuget FSharp.Core  redirects:force, content:none
-    nuget FAKE
+nuget FSharp.Data.Adaptive ~> 0.0.5-prerelease06
+nuget Adaptify.MSBuild     ~> 0.0.1
+
+github krauthaufen/Fable.Elmish.Adaptive
+
+#group Build
+#framework: net46
+#    source https://nuget.org/api/v2
+#    nuget FSharp.Core  redirects:force, content:none
+#    nuget FAKE
+
