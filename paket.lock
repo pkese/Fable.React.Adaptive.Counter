@@ -3,10 +3,10 @@ STORAGE: NONE
 RESTRICTION: || (== netcoreapp2.2) (== netstandard2.0)
 NUGET
   remote: https://api.nuget.org/v3/index.json
-    Adaptify.Core (0.0.1)
-      FSharp.Data.Adaptive (>= 0.0.5-prerelease01 < 0.1.0-prerelease)
-    Adaptify.MSBuild (0.0.1)
-      Adaptify.Core (0.0.1)
+    Adaptify.Core (0.0.2)
+      FSharp.Data.Adaptive (>= 0.0.5-prerelease06 < 0.1.0-prerelease)
+    Adaptify.MSBuild (0.0.2)
+      Adaptify.Core (0.0.2)
     Elmish (3.0.6)
       FSharp.Core (>= 4.6.2)
     Fable.Browser.Blob (1.1)
@@ -25,7 +25,7 @@ NUGET
       Fable.Browser.Event (>= 1.0)
       Fable.Core (>= 3.0)
       FSharp.Core (>= 4.5.2)
-    Fable.Core (3.1.2)
+    Fable.Core (3.1.3)
       FSharp.Core (>= 4.7)
     Fable.Elmish (3.0.6)
       Fable.Core (>= 3.0)
@@ -53,16 +53,20 @@ NUGET
       Fable.Core (>= 3.0)
       FSharp.Core (>= 4.7)
     FSharp.Core (4.7)
-    FSharp.Data.Adaptive (0.0.5-prerelease06)
+    FSharp.Data.Adaptive (0.0.6)
+      FSharp.Core (>= 4.6.2)
+    Thoth.Json (3.4.1)
+      Fable.Core (>= 3.0)
       FSharp.Core (>= 4.6.2)
 GITHUB
   remote: krauthaufen/Fable.Elmish.Adaptive
-    FULLPROJECT (ece46c3a21e45e26ec667fcfcdeba7ac0b47139e)
-      Adaptify.MSBuild (>= 0.0.1 < 0.1)
+    FULLPROJECT (ac5ce81bd4830090bef87422973bdefaa612e20c)
+      Adaptify.MSBuild (>= 0.0.2 < 0.1)
       Elmish
       Fable.Browser.Dom (>= 1.1 < 1.2)
       Fable.Core (>= 3.1.1 < 3.2)
       Fable.Elmish.React (>= 3.0.1 < 3.1)
       Fable.Promise (>= 2.0 < 2.1)
       FSharp.Core (>= 4.7)
-      FSharp.Data.Adaptive (>= 0.0.5-prerelease06 < 0.1)
+      FSharp.Data.Adaptive (>= 0.0.6 < 0.1)
+      Thoth.Json

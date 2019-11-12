@@ -3,6 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="../paket-files/krauthaufen/Fable.Elmish.Adaptive/src/Fable.React.Adaptive/JsHelpers.fs" />
     <Compile Include="../paket-files/krauthaufen/Fable.Elmish.Adaptive/src/Fable.React.Adaptive/Hooks.fs" />
     <Compile Include="adaptiveApp.fs" />
     <Compile Include="app.fs" />
