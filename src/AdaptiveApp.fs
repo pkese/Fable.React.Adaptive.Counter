@@ -3,7 +3,7 @@ module AdaptiveDemo
 open Fable.React
 open Fable.React.Props
 open FSharp.Data.Adaptive
-open Fable.React.Adaptive
+open Adaptive.Hooks
 
 let rec nextPrime x =
     let isPrime = function
@@ -26,8 +26,8 @@ let aPrime10 = aPrime |> AVal.map (fun x ->
 
 let PrimeApp =
     FunctionComponent.Of( fun () ->
-        let prime = Hooks.useAdaptive aPrime
-        let prime10 = Hooks.useAdaptive aPrime10
+        let prime = Hook.useAVal aPrime
+        let prime10 = Hook.useAVal aPrime10
         div [] [
             p [] [ str (sprintf "next prime = %d" prime) ]
             p [] [ str (sprintf "next prime * 10 = %d" prime10) ]
@@ -36,12 +36,12 @@ let PrimeApp =
 
 let CounterApp =
     FunctionComponent.Of( fun () ->
-        let count = Hooks.useAdaptive cCount
+        let count, setCount = Hook.useCVal cCount
         let showingPrimes = Hooks.useState true
         div [] [
             p [] [ 
                 str (sprintf "Current count = %d " count)
-                button [ OnClick (fun _ -> transact (fun () -> cCount.Value <- cCount.Value + 1)) ] [ str "+" ]
+                button [ OnClick (fun _ -> setCount (count+1)) ] [ str "+" ]
             ]
             div [] [
                 button [ OnClick (fun _ -> showingPrimes.update (fun showing -> not showing)) ] [str "toggle primes"]

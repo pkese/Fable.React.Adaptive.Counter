@@ -15,10 +15,10 @@ nuget Fable.Elmish.HMR
 nuget Fable.Browser.Dom
 nuget Fable.Browser.Event
 
-nuget FSharp.Data.Adaptive ~> 0.0.6
-nuget Adaptify.MSBuild     ~> 0.0.1
+nuget FSharp.Data.Adaptive ~> 1.2.13
+#nuget Adaptify.MSBuild     ~> 0.0.1
 
-github krauthaufen/Fable.Elmish.Adaptive
+#github krauthaufen/Fable.Elmish.Adaptive
 
 #group Build
 #framework: net46

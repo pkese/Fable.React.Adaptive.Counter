@@ -20,6 +20,7 @@ obj
 bin
 out
 paket-files
+src/fs.js.build
 
 # git
 *.orig
