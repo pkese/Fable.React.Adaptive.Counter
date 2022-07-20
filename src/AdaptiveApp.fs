@@ -21,10 +21,12 @@ let aPrime = cCount |> AVal.map nextPrime
 let aPrime10 = aPrime |> AVal.map (fun x ->
     let x' = x*10
     // open browser's debug console to notice lazy evaluation of adaptive values
+    // i.e. if next prime is the same as current prime, there will be no `printf` to console
     printfn "prime multiplier: %d * 10 = %d" x x'
     x')
 
 let PrimeApp =
+    // when this component isn't mounted, adaptive values won't get evaluated at all
     FunctionComponent.Of( fun () ->
         let prime = Hook.useAVal aPrime
         let prime10 = Hook.useAVal aPrime10

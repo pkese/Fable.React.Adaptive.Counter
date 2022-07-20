@@ -1,5 +1,5 @@
 
-## A react-counter demo with  [FSharp.Data.Adaptive](https://fsprojects.github.io/FSharp.Data.Adaptive/) and some custom hooks to link Adaptive values with React components and make them update 
+## A react-counter demo with  [FSharp.Data.Adaptive](https://fsprojects.github.io/FSharp.Data.Adaptive/) 
 
 This is a port of a sample react-counter app implemented with Adaptive instead of Elmish.
 
@@ -36,9 +36,11 @@ Think of a single new element being added to existing changeable List: an adapti
 
 - Widen your horizons by watching an amazing introduction to OCaml Incremental presented by Yaron Minsky at https://www.youtube.com/watch?v=R3xX37RGJKE
 
-### I want to use it myself
+### Ok, I want to use it myself
 
-Fork this project as a template or simply add FSharp.Data.Adaptive from nuget and also copy&paste [Adaptive.Hooks.fs](blob/master/src/Adaptive.Hooks.fs) from this project into yours to get Hooks working.
+- Fork this project as a template and start from here
+- *or* simply add FSharp.Data.Adaptive package from nuget 
+  and make sure to also copy&paste [Adaptive.Hooks.fs](src/Adaptive.Hooks.fs) from this project into yours to get Hooks working.
 
 ### To build locally and start hot-reloading server
 1. `dotnet tool restore`
