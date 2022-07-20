@@ -19,11 +19,11 @@ module.exports = {
     entry: isProduction ? // We don't use the same entry for dev and production, to make HMR over style quicker for dev env
     {
         demo: [
-            './src/fs.js.build/app.js'
+            './fs.js.build/app.js'
         ]
     } : {
         app: [
-            './src/fs.js.build/app.js'
+            './fs.js.build/app.js'
         ]
     },
     output: {
