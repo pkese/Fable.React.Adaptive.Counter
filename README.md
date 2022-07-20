@@ -1,5 +1,5 @@
 
-## A react-counter demo with  [FSharp.Data.Adaptive](https://fsprojects.github.io/FSharp.Data.Adaptive/) and [Fable.React.Adaptive](https://github.com/krauthaufen/Fable.Elmish.Adaptive/tree/master/src/Fable.React.Adaptive) 
+## A react-counter demo with  [FSharp.Data.Adaptive](https://fsprojects.github.io/FSharp.Data.Adaptive/) and some custom hooks to link Adaptive values with React components and make them update 
 
 This is a port of a sample react-counter app implemented with Adaptive instead of Elmish.
 
@@ -19,7 +19,7 @@ Read Georg Haaser's and Don Syme's introduction to [FSharp.Data.Adaptive](https:
 
 - **Changeable** values are like Excel cells with raw numbers
 - **Adaptive** values are like Excel formula cells, e.g. `"=SUM(A2:A10)"`. They update when source values change.
-- React **Hook.useAdaptive** makes React components update when adaptive values change.
+- **Hook.useAVal** and **Hook.useCVal** makes React components update when adaptive values change.
 - Unlike Excel cells that can contain only scalars, Adaptive values can contain data structures like `List`, `Map`, `Set`...
 - Unlike Excel formula cells that update on every change, Adaptive values update only when someone is listening to changes. React components that are not on screen won't cause corresponding adaptive values to recalculate.  
 *"If a tree falls in a forest and no one is around to hear it, does it make a sound?"*  
@@ -36,9 +36,14 @@ Think of a single new element being added to existing changeable List: an adapti
 
 - Widen your horizons by watching an amazing introduction to OCaml Incremental presented by Yaron Minsky at https://www.youtube.com/watch?v=R3xX37RGJKE
 
+### I want to use it myself
+
+Fork this project as a template or simply add FSharp.Data.Adaptive from nuget and also copy&paste [Adaptive.Hooks.fs](blob/master/src/Adaptive.Hooks.fs) from this project into yours to get Hooks working.
 
 ### To build locally and start hot-reloading server
-1. `yarn install`
-2. `yarn start`
-3. open http://localhost:8080/
+1. `dotnet tool restore`
+2. `dotnet paket restore`
+3. `npm install`
+4. `npm start`
+5. open http://localhost:8080/
 
